@@ -1,0 +1,28 @@
+version: '2'
+services:
+  train:
+    build: .
+    image: dream-training
+    command: "/usr/bin/python3.5 train_nn.py"
+    volumes:
+      - .:/root/neuralNet
+    volumes_from:
+      - train-data
+  train-data:
+    image: busybox
+    volumes:
+      - /root/neuralNet/training_output
+
+  sample:
+    build: .
+    image: dream-sampling
+    command: "/usr/bin/python3.5 sample_nn.py -net 3_256_100_long_run  -length 4000 -temp .3"
+    volumes:
+      - .:/root/neuralNet
+    volumes_from:
+      - sample-data
+
+  sample-data:
+    image: busybox
+    volumes:
+      - /root/neuralNet/sample-out/
