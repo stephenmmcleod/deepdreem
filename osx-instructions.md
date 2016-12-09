@@ -91,8 +91,6 @@ If that doesn't work, you may need to install boost manually.
 
 # Boost install
 
-First try to just install the requirements
-
 ```
 for x in snappy leveldb gflags glog szip lmdb homebrew/science/opencv; do brew uninstall $x; brew install --build-from-source --fresh -vd $x; done
 
@@ -109,7 +107,7 @@ conda install protobuf
 conda install boost
 ```
 
-O
+**Makefile.config**
 
 ```
 cd ../
@@ -117,7 +115,7 @@ cd ../
 cp Makefile.config.example Makefile.config
 ```
 
-**Makefile.config**
+
 
 Modify Makefile.config for to use CPU\_ONLY option. If you have a nvidia GPU, this does not apply.
 
@@ -133,56 +131,52 @@ NOTE: this is required only if you will compile the python interface.
 
 We need to be able to find Python.h and numpy/arrayobject.h.
 
-PYTHON\_INCLUDE := /usr/include/python2.7
-
+```
+# PYTHON_INCLUDE := /usr/include/python2.7 \
 # /usr/lib/python2.7/dist-packages/numpy/core/include
-
 # Anaconda Python distribution is quite popular. Include path:
-
 # Verify anaconda location, sometimes it's in root.
 
-ANACONDA\_HOME := /path/to/anaconda-2.0.1
+ANACONDA_HOME := /path/to/anaconda-2.0.1
+PYTHON_INCLUDE := $(ANACONDA_HOME)/include \
+ $(ANACONDA_HOME)/include/python2.7 \
+ $(ANACONDA_HOME)/lib/python2.7/site-packages/numpy/core/include \
+# We need to be able to find libpythonX.X.so or .dylib.
 
-PYTHON\_INCLUDE := $\(ANACONDA\_HOME\)/include \
-
-$\(ANACONDA\_HOME\)/include/python2.7 \
-
-$\(ANACONDA\_HOME\)/lib/python2.7/site-packages/numpy/core/include \# We need to be able to find [libpythonX.X.so](http://libpythonx.x.so/) or .dylib.
-
-PYTHON\_LIB := /usr/lib
-
-PYTHON\_LIB := $\(ANACONDA\_HOME\)/lib
-
-add to .profile
-
-# pyenv
-
-export PYENV\_ROOT="${HOME}/.pyenv"
-
-if \[ -d "${PYENV\_ROOT}" \]; then
-
-```
-export PATH=${PYENV_ROOT}/bin:$PATH
-
-eval "$(pyenv init -)"
+# PYTHON_LIB := /usr/lib
+PYTHON_LIB := $(ANACONDA_HOME)/lib
 ```
 
+**add to .profile**
+
+## pyenv
+```
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
 fi
+```
 
-# caffe
+## caffe
 
+```
 export PYTHONPATH=/path/to/caffe/python:$PYTHONPATH
 
-export DYLD\_FALLBACK\_LIBRARY\_PATH=/usr/local/cuda/lib:$HOME/.pyenv/versions/anaconda-2.0.1/lib:/usr/local/lib:/usr/lib
+export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/cuda/lib:$HOME/.pyenv/versions/anaconda-2.0.1/lib:/usr/local/lib:/usr/lib
+```
 
 \(maybe also comment out python import line like this, test first\)
 
-# PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
+```
+#PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
 
 exportPATH
+```
 
 Compile and Test
 
+```
 make all
 
 make runtest
@@ -190,8 +184,15 @@ make runtest
 make pycaffe
 
 make distribute
+```
 
+If there’s no problem, you can see something like the below message
 
+```
+[----------] Global test environment tear-down
+[==========] 581 tests from 111 test cases ran. (14856 ms total)
+[ PASSED ] 581 tests.
+```
 
 
 
@@ -201,12 +202,13 @@ get this cool notebook and play:
 
 [https://github.com/google/deepdream](https://github.com/google/deepdream)
 
-  
 we need this caffemodel for the code in the notebook as it isn’t included in the caffe git checkout
-
 
 ```
 cd <path to caffe>/models/bvlc_googlenet
 
-wget http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel
+wget http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel
 ```
+
+
+
