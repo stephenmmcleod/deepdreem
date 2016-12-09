@@ -1,6 +1,26 @@
+# Getting started \(the hard way\)
+
+Some resources here:
+
+[https://www.reddit.com/r/deepdream/comments/3cawxb/what\_are\_deepdream\_images\_how\_do\_i\_make\_my\_own/ ](https://www.reddit.com/r/deepdream/comments/3cawxb/what_are_deepdream_images_how_do_i_make_my_own/)
+
+or just use one of these:
+
+[https://haduonght.wordpress.com/2015/02/21/install-caffe-on-mac-os-x-10-10/](https://haduonght.wordpress.com/2015/02/21/install-caffe-on-mac-os-x-10-10/)
+
+see also potentially, and especially if planning to do GPU support on future machine:
+
+[http://caffe.berkeleyvision.org/installation.html](http://caffe.berkeleyvision.org/installation.html)
+
+[http://hoondy.com/2015/04/03/how-to-install-caffe-on-mac-os-x-10-10-for-dummies-like-me/](http://hoondy.com/2015/04/03/how-to-install-caffe-on-mac-os-x-10-10-for-dummies-like-me/)
+
+[http://installing-caffe-the-right-way.wikidot.com/start](http://installing-caffe-the-right-way.wikidot.com/start)
+
+# 
+
 # Install Anaconda
 
-We likely already have a python installed, so let's install `pyenv` first. It's easy to install dependancies on OSX using `homebrew` so make sure you have that installed first.
+We likely already have a python installed, so let's install `pyenv first. It's easy to install dependancies on OSX using homebrew so make sure you have that installed first.`
 
 [http://brew.sh/](http://brew.sh/)
 
@@ -16,17 +36,14 @@ pyenv rehash
 sudo pyenv local anaconda-2.0.1
 
 sudo pyenv global anaconda-2.0.1
-
 ```
 
 **Update packages in anaconda**
 
 ```
-
 conda update conda
 
 conda update anaconda
-
 ```
 
 **Check anaconda path**
@@ -39,8 +56,6 @@ You will get something like this:
 
 /Users/zoro/.pyenv/versions/anaconda-2.0.1
 
-
-
 # Install OpenCV
 
 ```
@@ -48,8 +63,6 @@ brew update
 
 brew tap homebrew/science
 ```
-
-
 
 &gt;&gt;&gt; here we want to do something different
 
@@ -62,8 +75,6 @@ brew tap homebrew/science
 * _**args « "-DPYTHON\_LIBRARY=\#{py\_prefix}/lib/libpython2.7.dylib"**_
 * _**args « "-DPYTHON\_INCLUDE\_DIR=\#{py\_prefix}/include/python2.7"**_
 
-
-
 # Caffe
 
 On the terminal, find a directory where you want Caffe to live and run the following:
@@ -74,7 +85,6 @@ git clone [https://github.com/BVLC/caffe.git](https://github.com/BVLC/caffe.git)
 cd &lt;caffe-dir&gt;/python
 
 for req in $\(cat requirements.txt\); do condainstall $req; done
-
 ```
 
 If that doesn't work, you may need to install boost manually.
@@ -97,7 +107,6 @@ brew install --build-from-source --fresh -vd boost boost-python
 conda install protobuf
 
 conda install boost
-
 ```
 
 O
@@ -124,7 +133,7 @@ NOTE: this is required only if you will compile the python interface.
 
 We need to be able to find Python.h and numpy/arrayobject.h.
 
-PYTHON_INCLUDE := /usr/include/python2.7
+PYTHON\_INCLUDE := /usr/include/python2.7
 
 # /usr/lib/python2.7/dist-packages/numpy/core/include
 
@@ -140,8 +149,7 @@ $\(ANACONDA\_HOME\)/include/python2.7 \
 
 $\(ANACONDA\_HOME\)/lib/python2.7/site-packages/numpy/core/include \# We need to be able to find [libpythonX.X.so](http://libpythonx.x.so/) or .dylib.
 
-
-PYTHON_LIB := /usr/lib
+PYTHON\_LIB := /usr/lib
 
 PYTHON\_LIB := $\(ANACONDA\_HOME\)/lib
 
@@ -182,3 +190,23 @@ make runtest
 make pycaffe
 
 make distribute
+
+
+
+
+
+**POST INSTALL**
+
+get this cool notebook and play:
+
+[https://github.com/google/deepdream](https://github.com/google/deepdream)
+
+  
+we need this caffemodel for the code in the notebook as it isn’t included in the caffe git checkout
+
+
+```
+cd <path to caffe>/models/bvlc_googlenet
+
+wget http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel
+```
