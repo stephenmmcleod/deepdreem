@@ -18,6 +18,12 @@ generate a novel
 
 [https://github.com/dariusk/NaNoGenMo-2015](https://github.com/dariusk/NaNoGenMo-2015)
 
+obama speech generator:
+
+[https://github.com/samim23/obama-rnn/](https://github.com/samim23/obama-rnn/)
+
+
+
 generate poetry from image
 
 [https://github.com/rossgoodwin/neuralsnap](https://github.com/rossgoodwin/neuralsnap)

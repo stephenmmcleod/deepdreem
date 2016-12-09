@@ -6,3 +6,5 @@ other libs for learning
 
 [https://github.com/Lasagne/Lasagne](https://github.com/Lasagne/Lasagne)
 
+[https://github.com/fchollet/keras](https://github.com/fchollet/keras)
+
