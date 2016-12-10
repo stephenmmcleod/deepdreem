@@ -1,5 +1,14 @@
 # Doing more with deep dream
 
+very interesting image -> image code
+
+https://phillipi.github.io/pix2pix/
+
+> We demonstrate that this approach is effective at synthesizing photos from label maps, reconstructing objects from edge maps, and colorizing images, among other tasks.
+
+**Very cool.**
+
+
 motion software
 
 [https://github.com/graphific/DeepDreamVideo](#)

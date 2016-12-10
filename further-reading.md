@@ -1,5 +1,9 @@
 # Readings
 
+Good talk on Unsupervised Learning
+
+[https://www.youtube.com/watch?v=XTbLOjVF-y4&feature=youtu.be](https://www.youtube.com/watch?v=XTbLOjVF-y4&feature=youtu.be)
+
 Interesting art project with thoughts on machine learning in general:
 
 [https://medium.com/artists-and-machine-intelligence/adventures-in-narrated-reality-6516ff395ba3\#.iwwr3e13y](https://medium.com/artists-and-machine-intelligence/adventures-in-narrated-reality-6516ff395ba3#.iwwr3e13y)
