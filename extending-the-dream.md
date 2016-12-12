@@ -8,7 +8,6 @@ https://phillipi.github.io/pix2pix/
 
 **Very cool.**
 
-
 motion software
 
 [https://github.com/graphific/DeepDreamVideo](#)

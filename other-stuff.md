@@ -8,3 +8,7 @@ other libs for learning
 
 [https://github.com/fchollet/keras](https://github.com/fchollet/keras)
 
+
+Using Torch with Unreal Engine
+
+[https://github.com/facebook/UETorch](https://github.com/facebook/UETorch)
