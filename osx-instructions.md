@@ -8,14 +8,6 @@ or just use one of these:
 
 [https://haduonght.wordpress.com/2015/02/21/install-caffe-on-mac-os-x-10-10/](https://haduonght.wordpress.com/2015/02/21/install-caffe-on-mac-os-x-10-10/)
 
-also good
-
-[http://ryankennedy.io/running-the-deep-dream/](http://ryankennedy.io/running-the-deep-dream/)
-
-and
-
-[https://haduonght.wordpress.com/2015/02/21/install-caffe-on-mac-os-x-10-10/](https://haduonght.wordpress.com/2015/02/21/install-caffe-on-mac-os-x-10-10/)
-
 see also potentially, and especially if planning to do GPU support on future machine:
 
 [http://caffe.berkeleyvision.org/installation.html](http://caffe.berkeleyvision.org/installation.html)
@@ -123,8 +115,6 @@ cd ../
 cp Makefile.config.example Makefile.config
 ```
 
-
-
 Modify Makefile.config for to use CPU\_ONLY option. If you have a nvidia GPU, this does not apply.
 
 ```
@@ -158,11 +148,12 @@ PYTHON_LIB := $(ANACONDA_HOME)/lib
 **add to .profile**
 
 ## pyenv
+
 ```
-export PYENV_ROOT="${HOME}/.pyenv"
-if [ -d "${PYENV_ROOT}" ]; then
-    export PATH=${PYENV_ROOT}/bin:$PATH
-    eval "$(pyenv init -)"
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
 fi
 ```
 
@@ -197,12 +188,10 @@ make distribute
 If there’s no problem, you can see something like the below message
 
 ```
-[----------] Global test environment tear-down
-[==========] 581 tests from 111 test cases ran. (14856 ms total)
-[ PASSED ] 581 tests.
+[----------] Global test environment tear-down
+[==========] 581 tests from 111 test cases ran. (14856 ms total)
+[ PASSED ] 581 tests.
 ```
-
-
 
 **POST INSTALL**
 
