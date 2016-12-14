@@ -10,15 +10,13 @@ https://phillipi.github.io/pix2pix/
 
 motion software
 
-[https://github.com/graphific/DeepDreamVideo](#)
+[https://github.com/graphific/DeepDreamVideo](deep dream video)
+
 
 zoom animations
 
-[https://github.com/samim23/DeepDreamAnim](#)
+[https://github.com/samim23/DeepDreamAnim](deep dream animations)
 
-video:
-
-[https://github.com/graphific/DeepDreamVideo](https://github.com/graphific/DeepDreamVideo)
 
 bat country \(allows you to 'influence' the dream with a target image\)
 

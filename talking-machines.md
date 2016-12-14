@@ -30,3 +30,6 @@ generate poetry from image
 
 [https://github.com/rossgoodwin/photosynthesis](https://github.com/rossgoodwin/photosynthesis)
 
+How to RNN
+
+[https://github.com/ml4a/ml4a-guides/blob/master/notebooks/recurrent_neural_networks.ipynb](https://github.com/ml4a/ml4a-guides/blob/master/notebooks/recurrent_neural_networks.ipynb)

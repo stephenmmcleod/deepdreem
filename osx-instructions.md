@@ -8,6 +8,14 @@ or just use one of these:
 
 [https://haduonght.wordpress.com/2015/02/21/install-caffe-on-mac-os-x-10-10/](https://haduonght.wordpress.com/2015/02/21/install-caffe-on-mac-os-x-10-10/)
 
+also good
+
+[http://ryankennedy.io/running-the-deep-dream/](http://ryankennedy.io/running-the-deep-dream/)
+
+and
+
+[https://haduonght.wordpress.com/2015/02/21/install-caffe-on-mac-os-x-10-10/](https://haduonght.wordpress.com/2015/02/21/install-caffe-on-mac-os-x-10-10/)
+
 see also potentially, and especially if planning to do GPU support on future machine:
 
 [http://caffe.berkeleyvision.org/installation.html](http://caffe.berkeleyvision.org/installation.html)
