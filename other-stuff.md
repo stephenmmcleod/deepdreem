@@ -12,3 +12,16 @@ other libs for learning
 Using Torch with Unreal Engine
 
 [https://github.com/facebook/UETorch](https://github.com/facebook/UETorch)
+
+
+Making scary images using open nsfw
+
+[https://open_nsfw.gitlab.io/](https://open_nsfw.gitlab.io/)
+
+Image to image translation (really cool!)
+
+[https://phillipi.github.io/pix2pix/](https://phillipi.github.io/pix2pix/)
+
+Interesting talk on the future of neural nets
+
+[https://www.youtube.com/watch?v=XTbLOjVF-y4&feature=youtu.be](https://www.youtube.com/watch?v=XTbLOjVF-y4&feature=youtu.be)

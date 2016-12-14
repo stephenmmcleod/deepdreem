@@ -28,9 +28,10 @@ trippy stuff
 
 [https://www.youtube.com/watch?v=NYVg-V8-7q0](https://www.youtube.com/watch?v=NYVg-V8-7q0)
 
-weird trump
+trump
 
 [https://vimeo.com/160327459](https://vimeo.com/160327459)
 
+Nightmare machine from MIT
 
-
+[http://nightmare.mit.edu/](http://nightmare.mit.edu/)
